@@ -25,7 +25,7 @@ public class PlatformMover : MonoBehaviour
 
     void Update()
     {
-        newPosition.x = startPosition.x + (maxDistance * Mathf.Sin(Time.time * speed));
+        newPosition.x = startPosition.x + (maxDistance * Mathf.Sin(Time.time - 2 * speed));
         transform.position = newPosition;
     }
 }
