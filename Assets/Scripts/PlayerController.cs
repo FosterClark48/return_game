@@ -19,11 +19,18 @@ public class PlayerController : MonoBehaviour
 
     private Animator playerAnimation;
 
+    private Vector3 respawnPoint;
+
+    private CameraController cc;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
+        respawnPoint = transform.position;
+
+        cc = Camera.main.gameObject.GetComponent<CameraController>();
     }
 
     // Update is called once per frame
@@ -58,5 +65,34 @@ public class PlayerController : MonoBehaviour
         // Get velocity of player on x axis - mathf.abs makes whatever value a positive (e.g. moving left=negative)
         playerAnimation.SetFloat("Speed", Mathf.Abs(player.velocity.x));
         playerAnimation.SetBool("OnGround", isTouchingGround);
+    }
+
+    [ContextMenu("Respawn")]
+    void Respawn(){
+        player.velocity = Vector2.zero;
+            player.transform.position = respawnPoint;
+
+            var newCameraPos = cc.gameObject.transform.position;
+
+            newCameraPos = new Vector3(newCameraPos.x, player.transform.position.y, newCameraPos.z);
+
+            cc.gameObject.transform.position = newCameraPos;
+    }
+
+[ContextMenu("Set Spawn")]
+    void SetSpawn(){
+        respawnPoint = this.transform.position;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Spawn"))
+        {
+            SetSpawn();
+        }
+        if (other.gameObject.CompareTag("Hazard"))
+        {
+            Respawn();
+        }
     }
 }
