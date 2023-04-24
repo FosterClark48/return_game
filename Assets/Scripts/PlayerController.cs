@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -112,6 +113,11 @@ public class PlayerController : MonoBehaviour
         isFloating = true;
     }
 
+    public void EndGame()
+   {
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+   }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Spawn"))
@@ -125,6 +131,10 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Float"))
         {
             PlayerFloat();
+        }
+        if (other.gameObject.CompareTag("End"))
+        {
+            EndGame();
         }
     }
 }
