@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private bool isFloating = false;
     public float speed = 5f;
     public float jumpSpeed = 8f;
     private float direction = 0f;
@@ -62,6 +63,21 @@ public class PlayerController : MonoBehaviour
             player.velocity = new Vector2(player.velocity.x, jumpSpeed);
         }
 
+        if (isFloating)
+        {
+            // Keep floating upwards until the player hits the ground
+            if (!isTouchingGround)
+            {
+                player.velocity = new Vector2(player.velocity.x, Mathf.Abs(jumpSpeed));
+            }
+            else
+            {
+                // Reset gravity scale and flag when the player hits the ground
+                player.gravityScale = 1f;
+                isFloating = false;
+            }
+        }
+
         // Get velocity of player on x axis - mathf.abs makes whatever value a positive (e.g. moving left=negative)
         playerAnimation.SetFloat("Speed", Mathf.Abs(player.velocity.x));
         playerAnimation.SetBool("OnGround", isTouchingGround);
@@ -79,9 +95,21 @@ public class PlayerController : MonoBehaviour
             cc.gameObject.transform.position = newCameraPos;
     }
 
-[ContextMenu("Set Spawn")]
+    [ContextMenu("Set Spawn")]
     void SetSpawn(){
         respawnPoint = this.transform.position;
+    }
+
+    [ContextMenu("Player Float")]
+    void PlayerFloat(){
+        // Set player's y-velocity to a positive value to make it float upwards
+        player.velocity = new Vector2(player.velocity.x, Mathf.Abs(jumpSpeed));
+
+        // Set gravity scale to 0 to make the player float instead of falling
+        player.gravityScale = 0f;
+
+        // Set a flag to indicate that the player is floating
+        isFloating = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -93,6 +121,10 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Hazard"))
         {
             Respawn();
+        }
+        if (other.gameObject.CompareTag("Float"))
+        {
+            PlayerFloat();
         }
     }
 }
