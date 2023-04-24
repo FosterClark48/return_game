@@ -877,7 +877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4971876519495343069, guid: 468fefa89a115d441ac6ab058955dc9a, type: 3}
       propertyPath: rotationCenter
-      value:
+      value: 
       objectReference: {fileID: 1445467552}
     - target: {fileID: 4971876519495343070, guid: 468fefa89a115d441ac6ab058955dc9a, type: 3}
       propertyPath: m_Name
@@ -1043,8 +1043,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8889e40181e7cfb48b557e69d0f595f2, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 1.8
   maxDistance: 2
 --- !u!61 &383346680
@@ -1178,7 +1178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4971876519495343069, guid: 468fefa89a115d441ac6ab058955dc9a, type: 3}
       propertyPath: rotationCenter
-      value:
+      value: 
       objectReference: {fileID: 478590094}
     - target: {fileID: 4971876519495343070, guid: 468fefa89a115d441ac6ab058955dc9a, type: 3}
       propertyPath: m_Name
@@ -1375,8 +1375,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8889e40181e7cfb48b557e69d0f595f2, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 1.8
   maxDistance: 2
 --- !u!61 &497575345
@@ -1667,8 +1667,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7b387369d5e1403f82c0413e87fea4a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   player: {fileID: 1903007782}
   offset: 5
   offsetSmoothing: 2
@@ -1716,8 +1716,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8889e40181e7cfb48b557e69d0f595f2, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 1.8
   maxDistance: 2
 --- !u!61 &519917947
@@ -3748,7 +3748,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1466102627}
   - component: {fileID: 1466102626}
-  m_Layer: 0
+  - component: {fileID: 1466102628}
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3796,15 +3797,15 @@ SpriteRenderer:
   m_SortingLayerID: -755550041
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 999fbe3a9c0bc4399a17cb51ed897865, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00c56c302c3b34d0cb213478261aa8f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 20.48, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1466102627
@@ -3815,14 +3816,39 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466102625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 121, z: 0}
-  m_LocalScale: {x: 8.480293, y: 100, z: 1}
+  m_LocalPosition: {x: -0.1554, y: -0.71, z: 0}
+  m_LocalScale: {x: 1.0766685, y: 1.0635134, z: 0.06858816}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 358266147}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1466102628
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466102625}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -7.00235}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.48, y: 20.48}
+    newSize: {x: 20.48, y: 20.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.48, y: 6.4753003}
+  m_EdgeRadius: 0
 --- !u!1 &1481637531
 GameObject:
   m_ObjectHideFlags: 0
@@ -3978,8 +4004,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8889e40181e7cfb48b557e69d0f595f2, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 1.8
   maxDistance: 2
 --- !u!61 &1531847225
@@ -4135,8 +4161,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8889e40181e7cfb48b557e69d0f595f2, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 1.8
   maxDistance: 2
 --- !u!61 &1570250144
@@ -4756,8 +4782,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e465d8e467d24cb685f37e83a78bc3a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 5
   jumpSpeed: 7
   groundCheck: {fileID: 1645817309}
@@ -4797,7 +4823,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -4812,8 +4838,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 436c3ec76cf104636b94982a7dbc590d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1966198622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4971876519495343059, guid: 468fefa89a115d441ac6ab058955dc9a, type: 3}
@@ -4884,8 +4910,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8889e40181e7cfb48b557e69d0f595f2, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 1.8
   maxDistance: 2
 --- !u!61 &2003010804
@@ -5503,7 +5529,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -6295,7 +6321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4971876519495343069, guid: 468fefa89a115d441ac6ab058955dc9a, type: 3}
       propertyPath: rotationCenter
-      value:
+      value: 
       objectReference: {fileID: 1533023133}
     - target: {fileID: 4971876519495343070, guid: 468fefa89a115d441ac6ab058955dc9a, type: 3}
       propertyPath: m_Name
