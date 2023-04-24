@@ -8,7 +8,7 @@ TagManager:
   - Hazard
   - Spawn
   - Float
->>>>>>> afbe1548fa36e31f2afc0cf10555a8c57fdee76d
+  - End
   layers:
   - Default
   - TransparentFX
