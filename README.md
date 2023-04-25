@@ -15,7 +15,7 @@ _A 2D vertical platformer game created in Unity_
 
 ## Backstory 🌌
 
-In a galaxy far, far away, a curious little alien named Nimbis had ventured too far from his mothership. Fascinated by the beautiful planet Earth, he wanted to explore its rich atmosphere and stunning landscapes. But as Nimbis ventured further, he lost his way and found himself stranded in the thick cloud cover of the planet. Now, Nimbis has to make his way back to his mothership before it's too late! Join Nimbis on his adventure in Return, hopping from cloud to cloud, as he races against time to reunite with his alien family. Are you ready to help Nimbis conquer the skies and find his way home? 🌠
+From a galaxy far, far away, a curious little alien named Nimbis had ventured too far from his mothership. Fascinated by the beautiful planet Earth, he wanted to explore its rich atmosphere and stunning landscapes. But as Nimbis ventured further, he lost his way and found himself stranded in the thick cloud cover of the planet. Now, Nimbis has to make his way back to his mothership before it's too late! Join Nimbis on his adventure in Return, hopping from cloud to cloud, as he races against time to reunite with his alien family. Are you ready to help Nimbis conquer the skies and find his way home? 🌠
 
 ## How to Play 🎮
 
