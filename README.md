@@ -25,7 +25,7 @@ Playing Return is simple and fun! Use the following controls to guide Nimbis thr
 - Move right: `D` key or right arrow key
 - Jump: `Space` key
 
-Help Nimbis navigate the skies by jumping from cloud to cloud. Be careful not to fall, and watch out for obstacles! Can you make it to the mothership at the top? 🛸
+Help Nimbis navigate the skies by jumping from cloud to cloud. Be careful not to fall! Can you make it to the mothership at the top? 🛸
 
 ## How to Use 💾
 
